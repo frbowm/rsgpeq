@@ -23,7 +23,7 @@ fn main() {
     let p: Params = Params {
         pop_size: 1000,
         max_depth: 12,
-        max_generations: -1, //-1 says to run indefinitely until user hits return key.
+        max_generations: 50, //-1 says to run indefinitely until user hits return key.
         tourney_size: 3,
         p_crossover: 0.90,
         p_mutate: 0.05,
