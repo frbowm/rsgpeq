@@ -209,9 +209,9 @@ impl Display for Node {
         match self {
             Constant(c) => write!(f, "{}", c),
             Var => write!(f, "X"),
-            Plus(lhs, rhs)
-            | Minus(lhs, rhs)
-            | Mult(lhs, rhs)
+            Plus(lhs, rhs) => write!(f, "({} + {})", lhs, rhs),
+            | Minus(lhs, rhs) => write!(f, "({} - {})", lhs, rhs),
+            | Mult(lhs, rhs) => write!(f, "({} * {})", lhs, rhs),
             | Div(lhs, rhs) => write!(f, "({} / {})", lhs, rhs)
         }
     }
